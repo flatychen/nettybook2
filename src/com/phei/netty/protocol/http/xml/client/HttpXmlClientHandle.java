@@ -44,7 +44,7 @@ public class HttpXmlClientHandle extends
     }
 
     @Override
-    protected void messageReceived(ChannelHandlerContext ctx,
+    protected void channelRead0(ChannelHandlerContext ctx,
 	    HttpXmlResponse msg) throws Exception {
 	System.out.println("The client receive response of http header is : "
 		+ msg.getHttpResponse().headers().names());
